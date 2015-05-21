@@ -27,6 +27,8 @@
 #include <dirent.h>
 #endif
 
+#undef HAVE_PIPE2
+
 #if defined(__ANDROID__) && !defined(SYS_getdents64)
 /* Android doesn't expose syscalls, add the definition manually. */
 # include <sys/linux-syscalls.h>
